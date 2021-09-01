@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open_Lms</title>
+  <!-- This is font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+  <!-- This is bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Raleway', sans-serif;
+
+    }
+
+    body {
+      background: linear-gradient(90deg, white 0%, #faf7f5 10%, #c9c5c1 100%);
+      font-family: 'Nunito', sans-serif;
+      display: grid;
+      margin: 0;
+      padding: 0;
+      max-width: 1920px;
+      max-height: 1080px;
+      background-color: #FAFAFA;
+    }
+
+    /* navigation bar Style */
+    .navbar {
+      width: 100%;
+      background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+    }
+
+    .navbar a {
+      padding: 20px;
+      color: #4b5156;
+      font-family: 'Nunito', sans-serif;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #eb6154;
+      color: black;
+      font-weight: bold;
+      transition: transform .2s;
+    }
+
+    .active {
+      background-color: rgb(218, 218, 218);
+    }
+
+    @media screen and (max-width: 500px) {
+      .navbar a {
+        float: none;
+        display: block;
+      }
+    }
+
+    #text1 {
+      display: block;
+      white-space: nowrap;
+
+      animation: text123 5s steps(22) 1s infinite alternate;
+      overflow: hidden;
+    }
+
+    @keyframes text12 {
+      from {
+        width: 1%;
+      }
+
+      to {
+        width: 20%;
+      }
+    }
+
+    /* ---------SLIDER---------*/
+    .container img {
+      vertical-align: middle;
+    }
+
+    .container .content {
+      position: absolute;
+      bottom: 0;
+      height: inherit;
+      background: rgb(0, 0, 0);
+      /* Fallback color */
+      background: rgba(0, 0, 0, 0.5);
+      /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      width: 100%;
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+
+
+    .line,
+    .carousel li img,
+    .carousel li,
+    .carousel {
+      width: 100%;
+    }
+
+    .flex,
+    .carousel-wrapper,
+    .carousel ul {
+      display: flex;
+    }
+
+    .center,
+    .carousel ul {
+      height: fit-content;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 50px;
+    }
+
+    .carousel-wrapper input {
+      display: none;
+    }
+
+    .carousel {
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .carousel ul {
+      position: relative;
+      list-style: none;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 600%;
+      transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    .carousel li img {
+      border-radius: 15px;
+    }
+
+
+    #slide1:checked~.carousel ul {
+      left: 0%;
+    }
+
+    #slide2:checked~.carousel ul {
+      left: -100%;
+    }
+
+    #slide3:checked~.carousel ul {
+      left: -200%;
+    }
+
+    #slide4:checked~.carousel ul {
+      left: -300%;
+    }
+
+    #slide5:checked~.carousel ul {
+      left: -400%;
+    }
+
+    .right-arrow,
+    .left-arrow {
+      color: #edc6c2;
+      display: none;
+      position: absolute;
+      cursor: pointer;
+      font-weight: bolder;
+      text-shadow: white;
+      top: 50%;
+      z-index: 1;
+      opacity: 0.7;
+      margin-top: -25px;
+      height: 50px;
+      font-size: 50px;
+      transition: 0.2s;
+    }
+
+    .right-arrow:hover,
+    .left-arrow:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .right-arrow:active,
+    .left-arrow:active {
+      transform: scale(0.9);
+    }
+
+    .left-arrow {
+      left: 15px;
+    }
+
+    .right-arrow {
+      right: 15px;
+    }
+
+    #slide1:checked~.left-arrow[for=slide5],
+    #slide1:checked~.right-arrow[for=slide2] {
+      display: block;
+    }
+
+    #slide2:checked~.left-arrow[for=slide1],
+    #slide2:checked~.right-arrow[for=slide3] {
+      display: block;
+    }
+
+    #slide3:checked~.left-arrow[for=slide2],
+    #slide3:checked~.right-arrow[for=slide4] {
+      display: block;
+    }
+
+    #slide4:checked~.left-arrow[for=slide3],
+    #slide4:checked~.right-arrow[for=slide5] {
+      display: block;
+    }
+
+    #slide5:checked~.left-arrow[for=slide4],
+    #slide5:checked~.right-arrow[for=slide1] {
+      display: block;
+    }
+
+    /* ---------SLIDER - END---------*/
+
+    /* head style */
+    .header-bar {
+      font-family: 'Nunito', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+      background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+    }
+
+    .header-bar a {
+      color: rgb(246, 247, 247);
+      text-decoration: none;
+    }
+
+    /* footer  */
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Nav bar start -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h3
+      style="color: whitesmoke; font-family:'Times New Roman',serif;font-weight:bolder; align-items: flex-end; padding-right:70vw;"
+      href="#">OPEN-LMS</h2><br>
+      <a class="navbar-brand" href="{% url 'login' %}">Login</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="{% url 'OpenLms' %}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Courses</a>
+        </div>
+      </div>
+  </nav>
+  <!-- Nav bar End -->
+
+  <!-- Slider Start -->
+  <div class="container">
+    <div class="center">
+      <div class="carousel-wrapper">
+        <!-- abstract radio buttons for slides -->
+        <input id="slide1" type="radio" name="controls" checked="checked" />
+        <input id="slide2" type="radio" name="controls" />
+        <input id="slide3" type="radio" name="controls" />
+        <input id="slide4" type="radio" name="controls" />
+        <input id="slide5" type="radio" name="controls" />
+        <!-- arrows -->
+        <label for="slide1" class="left-arrow">
+          < </label>
+            <label for="slide2" class="left-arrow">
+              < </label>
+                <label for="slide3" class="left-arrow">
+                  < </label>
+                    <label for="slide4" class="left-arrow">
+                      < </label>
+                        <label for="slide5" class="left-arrow">
+                          < </label>
+
+                            <label for="slide1" class="right-arrow"> > </label>
+                            <label for="slide2" class="right-arrow"> > </label>
+                            <label for="slide3" class="right-arrow"> > </label>
+                            <label for="slide4" class="right-arrow"> > </label>
+                            <label for="slide5" class="right-arrow"> > </label>
+
+                            <div class="carousel">
+                              <ul>
+                                <li>
+                                  <img
+                                    src="https://images.unsplash.com/flagged/photo-1574097656146-0b43b7660cb6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
+                                  <div class="content">
+                                    <h1>Heading</h1>
+                                    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te
+                                      duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris
+                                      pro, pri ponderum tractatos ei.</p>
+                                  </div>
+                                </li>
+                                <li>
+                                  <img
+                                    src="https://images.unsplash.com/photo-1522661067900-ab829854a57f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cnVyYWwlMjBzdHVkZW50JTIwaW5kaWF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                    alt="">
+                                </li>
+                                <li>
+                                  <img
+                                    src="https://images.unsplash.com/photo-1559633817-40d48f80e184?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" />
+                                </li>
+                                <li>
+                                  <img
+                                    src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80" />
+                                </li>
+                                <li>
+                                  <img
+                                    src="https://images.unsplash.com/photo-1449960276497-6f52103ce9d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1547&q=80" />
+                                </li>
+                                <li>
+                                  <img
+                                    src="https://images.unsplash.com/photo-1547226633-bb220b1b972c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" />
+                                </li>
+                              </ul>
+                            </div>
+      </div>
+    </div>
+  </div>
+
+  <!---- Slider End  ----->
+  <div class="container">
+
+    <h2 class="header-bar"><br>Why Open LMS ? <br><br></h2>
+    <ul>
+      <li>Strong Fundamentals</li>
+      <li>Decrease in School Drop Rates</li>
+      <li>Providing Teachers with Better Resources </li>
+    </ul>
+
+    <h2 class="header-bar">TIMELINE</h2>
+    <ol>
+      <li> Resources and reference collection will be completed by end of April</li>
+      <li> Animations and video presentation will be started from June</li>
+      <li> Science course for class 3 will be completed within July</li>
+      <li> Online publishing and offline sharing will start soon after that</li>
+    </ol>
+
+  </div>
+  <!--  Start Footer -->
+
+  <!-- End Footer -->
+
+
+</body>
+
+</html>
