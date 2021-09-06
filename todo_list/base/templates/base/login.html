@@ -9,51 +9,72 @@
 </head>
 <style>
   /* navigation bar Style */
-  .navbar {
-    width: 100%;
-    background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
-  }
 
-  .navbar a {
-    padding: 20px;
-    color: #4b5156;
-    font-family: 'Nunito', sans-serif;
-    text-decoration: none;
-    font-size: 17px;
-  }
+    .navbar {
+            width: 100%;
+            background: linear-gradient(90deg, #B1D4E0 0%, #2E8BC0 43%,#145DA0 100%, #0C2D48 10%);
+        }
 
-  .navbar a:hover {
-    background-color: rgb(218, 218, 218);
-  }
+        .navbar a {
+            border-radius: 10%;
+            padding: 20px;
+            color: #4b5156;
+            font-family: 'Nunito', sans-serif;
+            text-decoration: none;
+            font-size: 17px;
+        }
 
-  .active {
-    background-color: rgb(218, 218, 218);
-  }
+        .navbar a:hover {
+            border-radius: 10%;
+            background-color: #fffdfc ;
+            color: black;
+            font-weight: bold;
+            transition: transform .2s;
+        }
 
-  @media screen and (max-width: 500px) {
-    .navbar a {
-      float: none;
-      display: block;
-    }
-  }
+        .active {
+            background-color: rgb(218, 218, 218);
+        }
 
-  #text1 {
-    display: block;
-    white-space: nowrap;
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+            }
+        }
 
-    animation: text123 5s steps(22) 1s infinite alternate;
-    overflow: hidden;
-  }
+        #text1 {
+            display: block;
+            white-space: nowrap;
 
-  @keyframes text12 {
-    from {
-      width: 1%;
-    }
+            animation: text123 5s steps(22) 1s infinite alternate;
+            overflow: hidden;
+        }
 
-    to {
-      width: 20%;
-    }
-  }
+        @keyframes text12 {
+            from {
+                width: 1%;
+            }
+
+            to {
+                width: 20%;
+            }
+        }
+
+        body {
+            background: linear-gradient(90deg, white 0%,#faf7f5 10%, #c9c5c1 100%);
+            font-family: 'Nunito', sans-serif;
+            padding-top: 50px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Raleway', sans-serif;
+
+        }
 </style>
 
 <body>

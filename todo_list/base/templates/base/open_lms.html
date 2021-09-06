@@ -25,7 +25,7 @@
     }
 
     body {
-      background: linear-gradient(90deg, white 0%, #faf7f5 10%, #c9c5c1 100%);
+      background: linear-gradient(90deg, white 0%,#faf7f5 10%, #B1D4E0 100%);
       font-family: 'Nunito', sans-serif;
       display: grid;
       margin: 0;
@@ -37,8 +37,7 @@
 
     /* navigation bar Style */
     .navbar {
-      width: 100%;
-      background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+      background: linear-gradient(90deg, #B1D4E0 0%, #2E8BC0 43%,#145DA0 100%, #0C2D48 10%);
     }
 
     .navbar a {
@@ -50,14 +49,14 @@
     }
 
     .navbar a:hover {
-      background-color: #eb6154;
-      color: black;
+      background-color: #B1D4E0;
+      color: #145DA0;
       font-weight: bold;
       transition: transform .2s;
     }
 
     .active {
-      background-color: rgb(218, 218, 218);
+      background-color: #2E8BC0;
     }
 
     @media screen and (max-width: 500px) {
@@ -166,7 +165,7 @@
 
     .right-arrow,
     .left-arrow {
-      color: #edc6c2;
+      color: #145DA0;
       display: none;
       position: absolute;
       cursor: pointer;
@@ -236,7 +235,7 @@
       color: #fff;
       padding: 10px;
       border-radius: 5px 5px 0 0;
-      background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+      background: linear-gradient(90deg, #B1D4E0 0%, #2E8BC0 43%,#145DA0 100%, #0C2D48 10%);
     }
 
     .header-bar a {
@@ -245,6 +244,23 @@
     }
 
     /* footer  */
+    .list-unstyled a
+    {
+      color: white ;
+      font-weight: bold;
+    }
+    .page-footer
+    {
+     background-color: #2E8BC0;
+    }
+    .row
+    {
+      color: #0C2D48;
+    }
+    .footer-copyright,.footer-copyright a
+    {
+      color:white;
+    }
   </style>
 
 </head>
@@ -351,8 +367,90 @@
 
     
   </div>
-  <!--  Start Footer -->
+ 
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
 
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Open Lms</h5>
+        <p>Service Learning Project </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href=""> Jatin Singh</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
   <!-- End Footer -->
 
 

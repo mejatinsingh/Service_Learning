@@ -20,13 +20,12 @@
         /* navigation bar Style */
         .navbar {
             width: 100%;
-            background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 10%);
+            background: linear-gradient(90deg, #B1D4E0 0%, #2E8BC0 43%,#145DA0 100%, #0C2D48 10%);
         }
 
         .navbar a {
             border-radius: 10%;
             padding: 20px;
-            color: #4b5156;
             font-family: 'Nunito', sans-serif;
             text-decoration: none;
             font-size: 17px;
@@ -34,14 +33,15 @@
 
         .navbar a:hover {
             border-radius: 10%;
-            background-color: #fffdfc ;
-            color: black;
+            background-color: #B1D4E0 ;
+            color: #145DA0;
             font-weight: bold;
             transition: transform .2s;
         }
 
         .active {
-            background-color: rgb(218, 218, 218);
+            background-color: #B1D4E0 ;
+            color: #145DA0;
         }
 
         @media screen and (max-width: 500px) {
@@ -70,7 +70,7 @@
         }
 
         body {
-            background: linear-gradient(90deg, white 0%,#faf7f5 10%, #c9c5c1 100%);
+            background: linear-gradient(90deg, white 0%,#faf7f5 10%, #B1D4E0 100%);
             font-family: 'Nunito', sans-serif;
             padding-top: 50px;
         }
@@ -86,9 +86,10 @@
 
         .container {
             margin-top: 10% !important;
+            margin-bottom: 10% !important;
             max-width: 500px;
             margin: auto;
-            background-color: #fff;
+            background-color: #B1D4E0;
             -webkit-box-shadow: 2px 2px 13px -4px rgb(0, 0, 0, 0.21);
             box-shadow: 2px 2px 13px -4px rgba(150, 54, 54, 0.21);
         }
@@ -99,7 +100,7 @@
             color: #fff;
             padding: 10px;
             border-radius: 5px 5px 0 0;
-            background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+            background: linear-gradient(90deg, #B1D4E0 0%, #2E8BC0 43%,#145DA0 100%, #0C2D48 10%);
         }
 
         .header-bar a {
@@ -143,7 +144,7 @@
         .delete-link {
             text-decoration: none;
             font-weight: 900;
-            color: #cf4949;
+            color: #0C2D48;
             font-size: 22px;
             line-height: 0;
         }
@@ -156,16 +157,16 @@
         }
 
         #add-link {
-            color: #EB796F;
+            color: #0C2D48;
             text-decoration: none;
             font-size: 42px;
-            text-shadow: 1px 1px #81413b;
+            text-shadow: 1px 1px #B1D4E0;
         }
 
         input[type=text],
         input[type=password],
         textarea {
-            border: 1px solid #EB796F;
+            border: 1px solid #0C2D48;
             border-radius: 5px;
             padding: 10px;
             width: 90%;
@@ -177,9 +178,9 @@
         }
 
         .button {
-            border: 1px solid #EB796F;
-            background-color: #FAFAFA;
-            color: #EB796F;
+            border: 1px solid #145DA0;
+            background-color: #B1D4E0;
+            color: #0C2D48;
             padding: 10px;
             font-size: 14px;
             border-radius: 5px;
@@ -190,6 +191,25 @@
         .card-body {
             padding: 20px;
         }
+
+    /* footer  */
+    .list-unstyled a
+    {
+      color: white ;
+      font-weight: bold;
+    }
+    .page-footer
+    {
+     background-color: #2E8BC0;
+    }
+    .row
+    {
+      color: #0C2D48;
+    }
+    .footer-copyright,.footer-copyright a
+    {
+      color:white;
+    }
     </style>
 </head>
 
@@ -220,6 +240,93 @@
         {% endblock content %}
 
     </div>
+
+<!-- Footer -->
+<footer class="page-footer bottom font-small blue pt-4">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase">Open Lms</h5>
+          <p>Service Learning Project </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href=""> Jatin Singh</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+    <!-- End Footer -->
+  
+  
 </body>
 
 </html>
