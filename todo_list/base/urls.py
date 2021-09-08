@@ -5,6 +5,7 @@ from django.contrib.auth.views import LogoutView
 urlpatterns = [
 
     path('open_lms/', OpenLms, name='OpenLms'),
+    path('courses/',Courses, name='Courses'),
 
     path('login/', CustomLoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(next_page='login'), name='logout'),

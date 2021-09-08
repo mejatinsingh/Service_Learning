@@ -82,3 +82,6 @@ class DeleteView(LoginRequiredMixin,DeleteView):
 
 def OpenLms(request):
     return render(request, "base/open_lms.html",{})
+
+def Courses(request):
+    return render(request,"base/courses.html",{})
