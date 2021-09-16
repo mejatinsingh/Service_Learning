@@ -63,7 +63,7 @@ class TaskDetail(LoginRequiredMixin,DetailView):
 
 class TaskCreate(LoginRequiredMixin,CreateView):
     model = Task 
-    fields = ['title', 'description', 'complete']
+    fields = ['title', 'description', 'link','complete']
     success_url = reverse_lazy('tasks')
 
     def form_valid(self, form):
@@ -72,7 +72,7 @@ class TaskCreate(LoginRequiredMixin,CreateView):
 
 class TaskUpdate(LoginRequiredMixin,UpdateView):
     model = Task
-    fields = ['title', 'description', 'complete']
+    fields = ['title', 'description', 'link','complete']
     success_url = reverse_lazy('tasks')
 
 class DeleteView(LoginRequiredMixin,DeleteView):
@@ -83,5 +83,16 @@ class DeleteView(LoginRequiredMixin,DeleteView):
 def OpenLms(request):
     return render(request, "base/open_lms.html",{})
 
-def Courses(request):
-    return render(request,"base/courses.html",{})
+class Courses(ListView):
+    model = Task 
+    fields = ['title', 'description', 'link','complete']
+    success_url = reverse_lazy('tasks')
+
+    def form_valid(self, form):
+        form.instance.user =self.request.user
+        return super(TaskCreate, self).form_valid(form)
+
+# def Courses(request):
+#     card = Task.objects.all()
+#     return render(request,"base/courses.html",{"Task":card})
+

@@ -286,9 +286,15 @@
   </nav>
 <!-- Nav bar End -->
 
-
-
-
+{% for c in card %}
+<p>this is p tag</p>
+{{c.title}}
+{{c.discription}}
+{{c.link}}
+<hr>
+{% empty %}
+hello bhai
+{% endfor %}
  
 <!-- Footer -->
 <footer class="page-footer font-small blue pt-4">
